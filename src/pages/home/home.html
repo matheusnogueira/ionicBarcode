@@ -1,43 +1,52 @@
 <ion-header>
   <ion-navbar color="primary">
 
-    <ion-title>
-      <div class="row">
-        <div>
-          <img alt="logo" height="40" src="../../assets/imgs/logo.png">
-        </div>
-        <div style="text-align: left; padding-top: .5em; padding-left: .5em;">
-          Scanner
-        </div>
-      </div>
-    </ion-title>
+      <ion-title>
+          <div class="row">
+            <div>
+              <img alt="logo" height="40" src="../../assets/imgs/logo.png">
+            </div>
+            <div style="text-align: left; padding-top: .5em; padding-left: .5em;">
+              Scanner
+            </div>
+          </div>
+        </ion-title>
 
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-row center>
-    <ion-col text-center>
-      <div *ngIf="results">
-        <p>{{results.text}}</p>
-        <p>{{results.format}}</p>
-        <p>{{results.cancelled}}</p>
-      </div>
-      <button ion-button large (click)="scanBarcode()">
-        <ion-icon name="aperture">          
-        </ion-icon>
-      </button>
-      <!--
-      <br>
-      <br>
-      <button ion-button large (click)="encodeData()">
-        <ion-icon large name="aperture">
-          <br> ENCODE
-        </ion-icon>
-      </button>
-    -->
-    </ion-col>
-  </ion-row>
+    <ion-row center>
+        <ion-col text-center>
+          <div *ngIf="results">
+            <p>{{results.text}}</p>
+            <p>{{results.format}}</p>
+            <p>{{results.cancelled}}</p>
+          </div>
+          <button ion-button large (click)="scanBarcode()">
+            <ion-icon name="aperture">          
+            </ion-icon>
+          </button>
+          <!--
+          <br>
+          <br>
+          <button ion-button large (click)="encodeData()">
+            <ion-icon large name="aperture">
+              <br> ENCODE
+            </ion-icon>
+          </button>
+          -->
+          
+      </ion-col>
+    </ion-row>
 
 </ion-content>
+
+
+
+
+
+
+
+
