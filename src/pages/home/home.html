@@ -1,17 +1,43 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
+
+    <ion-title>
+      <div class="row">
+        <div>
+          <img alt="logo" height="40" src="../../assets/imgs/logo.png">
+        </div>
+        <div style="text-align: left; padding-top: .5em; padding-left: .5em;">
+          Scanner
+        </div>
+      </div>
+    </ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-row center>
+    <ion-col text-center>
+      <div *ngIf="results">
+        <p>{{results.text}}</p>
+        <p>{{results.format}}</p>
+        <p>{{results.cancelled}}</p>
+      </div>
+      <button ion-button large (click)="scanBarcode()">
+        <ion-icon name="aperture">          
+        </ion-icon>
+      </button>
+      <!--
+      <br>
+      <br>
+      <button ion-button large (click)="encodeData()">
+        <ion-icon large name="aperture">
+          <br> ENCODE
+        </ion-icon>
+      </button>
+    -->
+    </ion-col>
+  </ion-row>
+
 </ion-content>
